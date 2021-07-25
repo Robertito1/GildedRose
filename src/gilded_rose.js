@@ -83,3 +83,9 @@ module.exports = {
 
 //NOTES
 //In a bid to familiarise with the way the code functions, I will add to the code modifications to accomodate the Conjured item
+//Now that the system is complete and I have a better understanding of the way the function is put together I can Refactor
+
+
+// REFACTOR OPTIONS
+// 1) extract the items updateQuality to be different functions
+// 2) Refactor in bits, starting with unncessary checks

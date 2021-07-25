@@ -27,3 +27,21 @@ describe("Gilded Rose", function() {
     expect(items[8]).toEqual({ name: 'Conjured Mana Cake', sellIn: 2, quality: 4 });
   })
 });
+
+describe("The system handles Conjured items correctly", function() {
+  const items = [
+    new Item("Conjured Mana Cake", 15, 22),
+    new Item("Conjured Mana Cake", 10, 2),
+    new Item("Conjured Mana Cake", 0, 3),
+    new Item("Conjured Mana Cake", -1, 7),
+  ];
+  const gildedRose = new Shop(items);
+  it("should foo", function() {
+    const items = gildedRose.updateQuality();
+
+    expect(items[0]).toEqual({name: 'Conjured Mana Cake', sellIn: 14, quality: 20});
+    expect(items[1]).toEqual({name: 'Conjured Mana Cake', sellIn: 9, quality: 0});
+    expect(items[2]).toEqual({name: 'Conjured Mana Cake', sellIn: -1, quality: 0});
+    expect(items[3]).toEqual({ name: 'Conjured Mana Cake', sellIn: -2, quality: 3 });
+  })
+});
