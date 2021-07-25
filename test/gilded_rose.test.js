@@ -24,6 +24,6 @@ describe("Gilded Rose", function() {
     expect(items[5]).toEqual({name: 'Backstage passes to a TAFKAL80ETC concert', sellIn: 14, quality: 21});
     expect(items[6]).toEqual({name: 'Backstage passes to a TAFKAL80ETC concert', sellIn: 9, quality: 50});
     expect(items[7]).toEqual({name: 'Backstage passes to a TAFKAL80ETC concert', sellIn: 4, quality: 50});
-    expect(items[8]).toEqual({ name: 'Conjured Mana Cake', sellIn: 2, quality: 3 });
+    expect(items[8]).toEqual({ name: 'Conjured Mana Cake', sellIn: 2, quality: 4 });
   })
 });
